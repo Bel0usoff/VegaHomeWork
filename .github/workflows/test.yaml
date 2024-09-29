@@ -1,9 +1,9 @@
-name: build and run
+name: basic
 on: [push]
 jobs:
-  build and run:
+  basic:
     runs-on: ubuntu-latest
-    stages:
+    steps:
       - uses: actions/checkout@v4
       - run: g++ main.cpp Rect.cpp -o main.cpp
       - run: ./main 3 9
