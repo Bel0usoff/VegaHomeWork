@@ -40,7 +40,7 @@ jobs:
       - uses: actions/download-artifact@v4
         with:
           name: binares
-      - run: chmod +x bench_example && ./bench_example 
+      - run: chmod +x bench_example && ./bench_example arg1 arg2 arg3
 
 
   
