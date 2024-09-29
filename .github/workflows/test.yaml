@@ -30,6 +30,6 @@ jobs:
       - uses: actions/download-artifact@v4
         with:
           name: binares
-      - run: chmod +x main && ./main
+      - run: chmod +x main && ./main 3 6
 
   
