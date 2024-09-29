@@ -1,10 +1,33 @@
 name: basic
 on: [push]
 jobs:
-  basic:
+  build:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
       - run: sudo apt-get update && sudo apt-get install -y cmake
       - run: mkdir build && cmake -B build -S . && cmake --build build
-      - run: ./build/tests
+      - uses: actions/upload-artifact@v4
+        with:
+          name: binares
+          path: |
+            build/main
+            build/tests
+      
+  tests:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/download-artifact@v4
+        with:
+          name: binares
+      - run: chmod +x tests && ./tests
+
+  run:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/download-artifact@v4
+        with:
+          name: binares
+      - run: chmod +x main && ./main
+
+  
