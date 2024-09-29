@@ -1,14 +1,9 @@
 #include"Rect.hpp"
-Rectangle :: Rectangle (int w, int l)
+double Perimetr(int width,int lenth)
 {
-    width = w;
-    lenth = l;
+    return (width+lenth)*2;
 }
-double Rectangle :: Perimetr()
-{
-    return (width*lenth)*2;
-}
-double Rectangle :: Area()
+double Area(int width, int lenth)
 {
     return width*lenth;
 }

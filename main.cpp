@@ -12,8 +12,8 @@ int main(int argc, char* argv[])
 	width = std :: atoi(argv[1]);
 	lenth = std :: atoi(argv[2]);
 	
-	Rectangle A(width,lenth);
-	std :: cout << A.Area()<<'\n'; 
-	std :: cout << A.Perimetr()<<'\n';
+	
+	std :: cout << Area(width,lenth)<<'\n'; 
+	std :: cout << Perimetr(width,lenth)<<'\n';
 	return 0;
 }

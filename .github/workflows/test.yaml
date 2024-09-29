@@ -6,4 +6,4 @@ jobs:
     steps:
       - uses: actions/checkout@v4
       - run: g++ main.cpp Rect.cpp -o main
-      - run: ./main 3 9
+      - run: ./build/tests
