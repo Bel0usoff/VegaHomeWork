@@ -6,9 +6,9 @@ TEST(Geom,Simple)
 {   
     EXPECT_EQ(Area(3,6),Area(6,3));
     EXPECT_EQ(Area(3,6),18);
-    EXPECT_EQ(Area(3,6),10);
+    
     EXPECT_EQ(Perimetr(2,5),14);
-    EXPECT_EQ(Perimetr(2,5),195);
+    
 }
 int main(int argc, char **argv) {
     ::testing::InitGoogleTest(&argc, argv);
